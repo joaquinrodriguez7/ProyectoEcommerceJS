@@ -7,10 +7,7 @@ a{
 .alerta{
     font-weight:700;
 }
-body{
-    background-color: #E3D8D6;
-    overflow-x: hidden;
-}
+
 .modal-contenedor{
     display:flex;
     align-items: center;
@@ -21,7 +18,9 @@ body{
     padding:20px;
 } 
 .modal-content{
-    background-color: #E3D8D6;
+    background-color: #e5e5f7;
+/* opacity: 0.8; */
+background: linear-gradient(135deg, #bfbfbf55 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #bfbfbf 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #bfbfbf55 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #bfbfbf 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
 }
 
 #precioTotal{
@@ -38,3 +37,24 @@ a{
 #totalCompra{
     text-align: right;
 }
+body, .modal-content {
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+

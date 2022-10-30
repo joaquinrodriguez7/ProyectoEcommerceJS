@@ -154,7 +154,7 @@ stockProductos.forEach((prod) => {
       <h4 class="card-text"> $ ${precio}</h4>
       <h6 class="card-title">${marca} ${modelo}</h6>
       <p class="card-text">Cantidad: ${cantidad}</p>
-      <button class="btn btn-primary" onclick="agregarProducto(${id})">Comprar Producto</button>
+      <button class="btn btn-dark" onclick="agregarProducto(${id})">Comprar Producto</button>
     </div>
   </div>`;
   };
@@ -186,15 +186,15 @@ const mostrarCarrito = () => {
       const { id, marca, modelo, precio, img, cantidad } = prod;
       console.log(modalBody);
       modalBody.innerHTML += `
-      <div class="modal-contenedor">
+      <div class="modal-contenedor articulo">
         <div>
-        <img class="img-fluid img-carrito" src="${img}"/>
+          <img class="img-fluid img-carrito" src="${img}"/>
         </div>
         <div>
-        <p>Producto: ${marca} ${modelo}</p>
-      <p>Precio: $ ${precio}</p>
-      <p>Cantidad :${cantidad}</p>
-      <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
+          <p class="fw-bold">${marca} ${modelo}</p>
+          <p>Precio: $ ${precio}</p>
+          <p>Cantidad :${cantidad}</p>
+          <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
         </div>
       </div>`;
     });
